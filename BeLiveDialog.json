@@ -1,0 +1,1085 @@
+{
+  "intents": [
+    {
+      "intent": "agendamento",
+      "examples": [
+        {
+          "text": "quando será minha @agenda"
+        },
+        {
+          "text": "que @agenda sera minha consulta"
+        },
+        {
+          "text": "quero saber a @agenda"
+        },
+        {
+          "text": "quero saber o @agenda"
+        }
+      ],
+      "description": "retorna a data da consulta"
+    },
+    {
+      "intent": "agendarConsulta",
+      "examples": [
+        {
+          "text": "agendar consulta"
+        },
+        {
+          "text": "consulta"
+        },
+        {
+          "text": "doutor"
+        },
+        {
+          "text": "marcar consulta"
+        },
+        {
+          "text": "não"
+        },
+        {
+          "text": "olá, desejo marcar uma consulta"
+        },
+        {
+          "text": "preciso de um medico"
+        },
+        {
+          "text": "preciso passar em um medico"
+        },
+        {
+          "text": "preciso passar no medico"
+        },
+        {
+          "text": "quero agendar uma consulta"
+        }
+      ],
+      "description": "marcar consulta"
+    },
+    {
+      "intent": "cancelamento",
+      "examples": [
+        {
+          "text": "desejo @cancelar minha consulta"
+        },
+        {
+          "text": "posso @cancelar minha consulta?"
+        },
+        {
+          "text": "preciso @cancelar minha consulta"
+        },
+        {
+          "text": "quero @cancelar minha consulta"
+        }
+      ],
+      "description": "cancelamento ou remarcar consulta"
+    },
+    {
+      "intent": "consulta",
+      "examples": [
+        {
+          "text": "medico especialista em @especialista"
+        }
+      ],
+      "description": "escolher um especialista"
+    },
+    {
+      "intent": "data",
+      "examples": [
+        {
+          "text": "data"
+        },
+        {
+          "text": "horario"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "especialidades",
+      "examples": [
+        {
+          "text": "@especialista"
+        },
+        {
+          "text": "quero fazer uma consulta com @especialista"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ola",
+      "examples": [
+        {
+          "text": "oi"
+        },
+        {
+          "text": "oi, como posso ajudar?"
+        },
+        {
+          "text": "ola"
+        },
+        {
+          "text": "ola, tudo bem?"
+        },
+        {
+          "text": "opa"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "região",
+      "examples": [
+        {
+          "text": "Eu sou de @cidade"
+        },
+        {
+          "text": "sim"
+        }
+      ],
+      "description": "identificar de onde o sujeito é"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "agenda",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "data",
+          "synonyms": [
+            "agenda",
+            "agendamento",
+            "ano",
+            "data",
+            "dia",
+            "horas",
+            "mes",
+            "momento",
+            "tempo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "cancelar",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cancelar consulta",
+          "synonyms": [
+            "cancelamento",
+            "cancelar",
+            "desistir",
+            "desmarcar"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "remarcar consulta",
+          "synonyms": [
+            "mudar data",
+            "não posso esse dia",
+            "outro dia",
+            "remarcar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "especialista",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "anestesista",
+          "synonyms": [
+            "anestesia",
+            "anestesiologia",
+            "apagar",
+            "ficar grogue",
+            "não sentir dor"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cardiologista",
+          "synonyms": [
+            "cardio",
+            "cardiologia",
+            "coração"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cirurgião",
+          "synonyms": [
+            "aparencia",
+            "cirurgia",
+            "estética",
+            "lipoaspiracao",
+            "mamaria",
+            "plastica",
+            "reconstrucao ",
+            "reparadora",
+            "silicone"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "clinico",
+          "synonyms": [
+            "checkup",
+            "geral"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dermatologista",
+          "synonyms": [
+            "dermo",
+            "espinha",
+            "oncologia",
+            "pele"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "endocrino",
+          "synonyms": [
+            "endo",
+            "endocrinologista",
+            "hormonio"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ginecologista",
+          "synonyms": [
+            "obstetricia ",
+            "obstreta",
+            "patologia",
+            "vagina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hematologia",
+          "synonyms": [
+            "hematologista",
+            "hematoma"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hematologista",
+          "synonyms": [
+            "hematologia",
+            "hematoma"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "neurologista",
+          "synonyms": [
+            "alergia",
+            "nariz",
+            "neuro",
+            "neurologia",
+            "rinite",
+            "sinusite"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "oftalmologista",
+          "synonyms": [
+            "catarata",
+            "oculos",
+            "olhos",
+            "vista"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "oncologista",
+          "synonyms": [
+            "cancer",
+            "oncologia",
+            "tumor",
+            "tumores"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ortopedista",
+          "synonyms": [
+            "articulacoes",
+            "ligamento",
+            "músculo",
+            "nervos",
+            "orto",
+            "ortopedia",
+            "osso",
+            "problema na perna ",
+            "problema no pétendoes"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pediatra",
+          "synonyms": [
+            "adolescente",
+            "gestante",
+            "para bebes",
+            "para criança",
+            "pediatria",
+            "pré adolescente",
+            "recem nascido"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "psiquiatra",
+          "synonyms": [
+            "psicoanalista",
+            "psicologo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "urologista",
+          "synonyms": [
+            "penis",
+            "pipiu",
+            "urina",
+            "uro",
+            "urologia",
+            "uru"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "estado",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Leste",
+          "synonyms": [
+            "Aricanduva",
+            "Itaquera",
+            "Mooca",
+            "Penha",
+            "Vila Prudente"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Norte",
+          "synonyms": [
+            "Casa Verde",
+            "Freguesia do Ó",
+            "Jaçanã",
+            "Santana",
+            "Tucuruvi"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Oeste",
+          "synonyms": [
+            "Barueri",
+            "Butantã",
+            "Lapa",
+            "Morumbi",
+            "Pinheiros",
+            "Vila Sonia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "São Paulo",
+          "synonyms": [
+            "cidade da chuva",
+            "metropolitano",
+            "paulista",
+            "sampa",
+            "São Paulo",
+            "SP"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sul",
+          "synonyms": [
+            "Campo Limpo",
+            "Jabaquara",
+            "M Boi Mirim",
+            "Santo amaro",
+            "Vila Mariana"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Leste",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Aricanduva",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Itaquera",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mooca",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Penha",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vila Prudente",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "não",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "não",
+          "synonyms": [
+            "errei",
+            "mudar",
+            "n",
+            "negativo",
+            "nn",
+            "ops"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Norte",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Casa Verde",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Freguesia do Ó",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Jaçanã",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Santanta",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tucuruvi",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Oeste",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Barueri",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Butantã",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lapa",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Morumbi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pinheiros",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vila Sônia",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sim",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "aham",
+            "claro",
+            "com certeza",
+            "exato",
+            "isso",
+            "s",
+            "si",
+            "ss"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Sul",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Campo Limpo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Jabaquara",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "M Boi Mirim",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Santo Amaro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vila Mariana",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Como posso te ajudar?"
+              },
+              {
+                "text": "Olá. Em que podemos ajudar?"
+              },
+              {
+                "text": "Bem-vindo(a) ao BeLive, como podemos te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome || #ola",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_8_1663285047025",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "#região",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Temos unidades por toda São Paulo (Norte, Sul, Leste e Oeste), em qual você está localizado(a)? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1663285931141",
+      "conditions": "@sim",
+      "dialog_node": "node_10_1663441863601"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Locais",
+            "options": [
+              {
+                "label": "Jabaquara",
+                "value": {
+                  "input": {
+                    "text": "@Sul"
+                  }
+                }
+              },
+              {
+                "label": "Santo Amaro",
+                "value": {
+                  "input": {
+                    "text": "@Santo Amaro"
+                  }
+                }
+              },
+              {
+                "label": "Vila Mariana",
+                "value": {
+                  "input": {
+                    "text": "@Vila Mariana"
+                  }
+                }
+              },
+              {
+                "label": "Campo Limpo",
+                "value": {
+                  "input": {
+                    "text": "@Campo Limpo"
+                  }
+                }
+              },
+              {
+                "label": "M Boi Mirim",
+                "value": {
+                  "input": {
+                    "text": "@M Boi Mirim"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_10_1663441863601",
+      "context": {
+        "sul": "@Sul"
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1663547915156"
+      },
+      "conditions": "@Sul",
+      "dialog_node": "node_4_1663441914871"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Casa Verde",
+                "value": {
+                  "input": {
+                    "text": "1"
+                  }
+                }
+              },
+              {
+                "label": "Santanta",
+                "value": {
+                  "input": {
+                    "text": "2"
+                  }
+                }
+              },
+              {
+                "label": "Jaçanã",
+                "value": {
+                  "input": {
+                    "text": "3"
+                  }
+                }
+              },
+              {
+                "label": "Tucuruvi",
+                "value": {
+                  "input": {
+                    "text": "4"
+                  }
+                }
+              },
+              {
+                "label": "Freguesia do Ó",
+                "value": {
+                  "input": {
+                    "text": "5"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_10_1663441863601",
+      "context": {
+        "estado": "@estado"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1663547915156"
+      },
+      "conditions": "@estado:Norte",
+      "dialog_node": "node_4_1663545536580",
+      "previous_sibling": "node_5_1663545387165"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Município",
+            "options": [
+              {
+                "label": "Barueri",
+                "value": {
+                  "input": {
+                    "text": "1"
+                  }
+                }
+              },
+              {
+                "label": "Butantã",
+                "value": {
+                  "input": {
+                    "text": "2"
+                  }
+                }
+              },
+              {
+                "label": "Lapa",
+                "value": {
+                  "input": {
+                    "text": "3"
+                  }
+                }
+              },
+              {
+                "label": "Morumbi",
+                "value": {
+                  "input": {
+                    "text": "4"
+                  }
+                }
+              },
+              {
+                "label": "Pinheiros",
+                "value": {
+                  "input": {
+                    "text": "5"
+                  }
+                }
+              },
+              {
+                "label": "Vila Sônia",
+                "value": {
+                  "input": {
+                    "text": "6"
+                  }
+                }
+              }
+            ],
+            "description": "escolha um local",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_10_1663441863601",
+      "context": {
+        "estado": "@estado"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1663547915156"
+      },
+      "conditions": "@estado:Oeste",
+      "dialog_node": "node_5_1663515499399",
+      "previous_sibling": "node_4_1663441914871"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Mooca",
+                "value": {
+                  "input": {
+                    "text": "1"
+                  }
+                }
+              },
+              {
+                "label": "Aricanduva",
+                "value": {
+                  "input": {
+                    "text": "2"
+                  }
+                }
+              },
+              {
+                "label": "Penha",
+                "value": {
+                  "input": {
+                    "text": "3"
+                  }
+                }
+              },
+              {
+                "label": "Itaquera",
+                "value": {
+                  "input": {
+                    "text": "4"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_10_1663441863601",
+      "context": {
+        "estado": "@estado"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1663547915156"
+      },
+      "conditions": "@estado:Leste",
+      "dialog_node": "node_5_1663545387165",
+      "previous_sibling": "node_5_1663515499399"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Agenda do DR.",
+            "options": [
+              {
+                "label": "02 de dezembro ás 09hs",
+                "value": {
+                  "input": {
+                    "text": "1"
+                  }
+                }
+              },
+              {
+                "label": "10 de dezembro ás 13hs",
+                "value": {
+                  "input": {
+                    "text": "2"
+                  }
+                }
+              },
+              {
+                "label": "12 de dezembro ás 10hs",
+                "value": {
+                  "input": {
+                    "text": "3"
+                  }
+                }
+              },
+              {
+                "label": "12 de dezembro ás 15hs",
+                "value": {
+                  "input": {
+                    "text": "4"
+                  }
+                }
+              },
+              {
+                "label": "15 de dezembro ás 07hs",
+                "value": {
+                  "input": {
+                    "text": "5"
+                  }
+                }
+              }
+            ],
+            "description": "Escolha uma data e um horário para consulta",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1663285931141",
+      "conditions": "@agenda",
+      "dialog_node": "node_5_1663547915156",
+      "previous_sibling": "node_10_1663441863601"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual tipo de especialidade ou especialista você deseja?"
+              },
+              {
+                "text": "Me informe a especialidade desejada"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#agendarConsulta",
+      "dialog_node": "node_8_1663285047025",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, você quer agendar uma consulta com um $especialista?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1663285047025",
+      "context": {
+        "especialista": "@especialista"
+      },
+      "conditions": "@especialista",
+      "dialog_node": "node_9_1663285931141"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "BeLive",
+  "language": "pt-br",
+  "description": ""
+}
